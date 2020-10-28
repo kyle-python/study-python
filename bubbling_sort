@@ -1,0 +1,28 @@
+
+
+
+list1 = [1, 534, 1545, 220, 2, 3, 15, 45, 66, 78, 89]
+def bubblingsort1(lst1):
+    """
+    冒泡排序
+    :param lst1: 传入一个列表
+    :return: 排序结果
+    从小到大排序
+    第一个数和第二个数比较
+    如果第一个数大于第二个数就交换位置
+    """
+    index = 0
+    last_index = 1
+    num = len(lst1)
+    while num >= 1:
+        while last_index < num:
+            if lst1[index] > lst1[last_index]:
+                print(lst1[index], lst1[last_index])
+                lst1[index], lst1[last_index] = lst1[last_index], lst1[index]
+            index += 1
+            last_index += 1
+        # 变量初始化
+        index = 0
+        last_index = 1
+        num -=1
+bubblingsort1(list1)
